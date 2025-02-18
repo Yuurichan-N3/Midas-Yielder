@@ -16,7 +16,7 @@ Skrip ini mendukung penggunaan **proxy otomatis** untuk menghindari pembatasan I
 
 ### **1️⃣ Clone Repository**
 ```bash
-git clone https://github.com/username/midas-bot.git
+git clone https://github.com/Yuurichan-N3/Midas-Yielder.git
 cd Midas-Yielder
 
 2️⃣ Instal Dependensi
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 3️⃣ Jalankan Skrip
 
-python midas.py
+python bot.py
 
 
 ---
