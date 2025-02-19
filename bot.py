@@ -76,7 +76,7 @@ def banner():
     print(Fore.CYAN + "╔══════════════════════════════════════════════╗")
     print(Fore.CYAN + "║      🚀 MIDAS BOT - Auto Task Completion     ║")
     print(Fore.CYAN + "║    Automate your MidasRWA account tasks!     ║")
-    print(Fore.CYAN + "║  Developed by: Your Team / Telegram Group    ║")
+    print(Fore.CYAN + "║  Developed by: https://t.me/sentineldiscus   ║")
     print(Fore.CYAN + "╚══════════════════════════════════════════════╝" + Fore.RESET)
     print(Fore.CYAN + '[#] Enhanced with Progress Bar & Proxy Support' + Fore.RESET)
     print('')
