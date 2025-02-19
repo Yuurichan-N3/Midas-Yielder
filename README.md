@@ -46,31 +46,8 @@ Jika proxy.txt kosong, skrip akan berjalan tanpa proxy.
 http://user:pass@proxyserver:port
 socks5://proxyserver:port
 
-
----
-
-## 📂 Struktur File
-
-📁 midas-bot
-📁 midas-bot
-├── **bot.py            # Skrip utama**
-├── **requirements.txt  # Dependensi yang harus diinstal**
-├── **data.txt          # Daftar akun (wajib diisi)**
-├── **proxy.txt         # Daftar proxy (opsional)**
-├── **README.md         # Dokumentasi proyek**
-
----
-
-📝 Catatan
+## 📝 Catatan
 
 Pastikan file data.txt berisi query yang akan diproses.
 
 Jika ada akun yang gagal login, skrip tetap berjalan untuk akun lainnya.
-
-
-
----
-
-📜 Lisensi
-
-MIT License
