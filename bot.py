@@ -468,4 +468,79 @@ def getreff(tomket):
                     time.sleep(1)  # For visual effect
                     pbar.update(1)
                 
-                if responseclaim.getcode() =
+                if responseclaim.getcode() == 201:
+                    log_with_timestamp(f"Referral rewards claimed: {jsontotalPoints} points, {jsontotalTickets} tickets", "SUCCESS")
+        else:
+            log_with_timestamp("No referral rewards available", "WARN")
+        
+        return True
+    except Exception as e:
+        log_with_timestamp(f'Referral processing failed: {str(e)}', "ERROR")
+        return False
+
+def sleep(num):
+    for i in tqdm(range(num), desc="Waiting", 
+                 bar_format="{desc}: {percentage:3.0f}%|{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]"):
+        time.sleep(1)
+
+def postrequest(bearer):
+    try:
+        if not bearer:
+            log_with_timestamp("No valid bearer token, skipping account", "ERROR")
+            return False
+            
+        success_count = 0
+        total_operations = 4  # Number of operations we're performing
+        
+        # Perform operations and count successes
+        if getuser(bearer):
+            success_count += 1
+        
+        if getcheckin(bearer):
+            success_count += 1
+            
+        if tix > 0:
+            log_with_timestamp(f'Starting to play games with {tix} tickets', "WARN")
+            if playgame(bearer):
+                success_count += 1
+        else:
+            success_count += 1  # Count as success if no tickets to play
+            
+        if getreff(bearer) and gettask(bearer):
+            success_count += 1
+            
+        # Calculate success percentage
+        success_rate = (success_count / total_operations) * 100
+        
+        print(f"\n{Fore.CYAN}╔{'═'*50}╗")
+        print(f"{Fore.CYAN}║ {Fore.YELLOW}Account Processing Complete                      {Fore.CYAN}║")
+        print(f"{Fore.CYAN}║ {Fore.WHITE}Success Rate: {Fore.GREEN if success_rate > 80 else Fore.YELLOW if success_rate > 50 else Fore.RED}{success_rate:.1f}%{' '*35}{Fore.CYAN}║")
+        print(f"{Fore.CYAN}╚{'═'*50}╝{Fore.RESET}\n")
+        
+        log_with_timestamp("Processing complete for this account", "SUCCESS")
+        print(f'{Fore.GREEN}-==========[github.com/raihante/midas]==========-{Fore.RESET}')
+        
+        return True
+        
+    except Exception as e:
+        log_with_timestamp(f'Error in main request processing: {str(e)}', "ERROR")
+        return False
+
+# Proxy rotation function - can be used to rotate proxies between accounts
+def rotate_proxy():
+    """Rotate to a different proxy"""
+    if proxies:
+        current_proxy = proxies[0]
+        proxies.append(proxies.pop(0))  # Move first proxy to the end
+        log_with_timestamp(f"Rotated from proxy: {current_proxy} to new proxy", "INFO")
+        return True
+    return False
+
+# THX FOR WATCHING :V
+if __name__ == "__main__":
+    try:
+        banner()
+        runforeva()
+    except KeyboardInterrupt:
+        print(f"\n{Fore.YELLOW}Program terminated by user. Goodbye!{Fore.RESET}")
+        sys.exit()
