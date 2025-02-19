@@ -65,4 +65,5 @@ Silakan gunakan dengan bijak.
 
 ---
 
-## 💡 Disclaimer: Penggunaan bot ini sepenuhnya tanggung jawab pengguna. Kami tidak bertanggung jawab atas penyalahgunaan skrip ini.
+## 💡 Disclaimer: 
+Penggunaan bot ini sepenuhnya tanggung jawab pengguna. Kami tidak bertanggung jawab atas penyalahgunaan skrip ini.
