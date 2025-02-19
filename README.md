@@ -18,15 +18,19 @@ Skrip ini mendukung penggunaan **proxy otomatis** untuk menghindari pembatasan I
 ```bash
 git clone https://github.com/Yuurichan-N3/Midas-Yielder.git
 cd Midas-Yielder
+```
 
 2️⃣ Instal Dependensi
 
+```bash
 pip install -r requirements.txt
+```
 
 3️⃣ Jalankan Skrip
 
+```bash
 python bot.py
-
+```
 
 ---
 
