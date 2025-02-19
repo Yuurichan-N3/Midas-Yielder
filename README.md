@@ -51,3 +51,18 @@ socks5://proxyserver:port
 Pastikan file data.txt berisi query yang akan diproses.
 
 Jika ada akun yang gagal login, skrip tetap berjalan untuk akun lainnya.
+
+
+---
+
+
+## 📜 Lisensi
+
+Proyek ini dibuat [Oleh](https://t.me/sentineldiscus).
+
+Silakan gunakan dengan bijak.
+
+
+---
+
+## 💡 Disclaimer: Penggunaan bot ini sepenuhnya tanggung jawab pengguna. Kami tidak bertanggung jawab atas penyalahgunaan skrip ini.
