@@ -53,11 +53,11 @@ socks5://proxyserver:port
 
 📁 midas-bot
 📁 midas-bot
-├── bot.py            # Skrip utama
-├── requirements.txt  # Dependensi yang harus diinstal
-├── data.txt          # Daftar akun (wajib diisi)
-├── proxy.txt         # Daftar proxy (opsional)
-├── README.md         # Dokumentasi proyek
+├── **bot.py            # Skrip utama**
+├── **requirements.txt  # Dependensi yang harus diinstal**
+├── **data.txt          # Daftar akun (wajib diisi)**
+├── **proxy.txt         # Daftar proxy (opsional)**
+├── **README.md         # Dokumentasi proyek**
 
 ---
 
