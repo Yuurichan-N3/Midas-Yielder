@@ -34,7 +34,7 @@ python bot.py
 
 ---
 
-⚙️ Konfigurasi Proxy (Opsional)
+## ⚙️ Konfigurasi Proxy (Opsional)
 
 Jika ingin menggunakan proxy, buat file proxy.txt dan tambahkan daftar proxy (satu per baris).
 
