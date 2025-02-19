@@ -41,7 +41,7 @@ Jika ingin menggunakan proxy, buat file proxy.txt dan tambahkan daftar proxy (sa
 Jika proxy.txt kosong, skrip akan berjalan tanpa proxy.
 
 
-## 📌 Contoh format proxy.txt:
+## 📌 Contoh format proxy.txt
 
 http://user:pass@proxyserver:port
 socks5://proxyserver:port
